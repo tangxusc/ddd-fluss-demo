@@ -1,0 +1,16 @@
+server:
+  port: 8080
+
+demo:
+  fluss:
+    bootstrap-servers: localhost:9123
+
+logging:
+  level:
+    root: warn
+    com.example.orderdemo: info
+    com.example.orderdemo.infrastructure.fluss.FlussEventSubscription: warn
+    org.apache.fluss: warn
+    org.apache.fluss.client.token.DefaultSecurityTokenManager: error
+  pattern:
+    console: "%d{HH:mm:ss.SSS} %-5level [%thread] %logger{36} - %msg%n"
